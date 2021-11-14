@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dpx-XJ-Uao">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,30 +13,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeekDayFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="day" translatesAutoresizingMaskIntoConstraints="NO" id="ZI5-Af-Rha">
-                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <rect key="frame" x="0.0" y="140" width="428" height="786"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jz9-6k-37w">
-                                <rect key="frame" x="114" y="782" width="186" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="eyP-gV-Bpa"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Find">
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                    <color key="baseBackgroundColor" systemColor="systemFillColor"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="label.borderRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="g9b-uo-oTs">
-                                <rect key="frame" x="50" y="179" width="314" height="130"/>
+                                <rect key="frame" x="50" y="179" width="328" height="130"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="hvy-rQ-Ddd">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="129"/>
@@ -80,15 +64,15 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="ZW9-ui-1dq">
-                                        <rect key="frame" x="94" y="0.0" width="220" height="130"/>
+                                        <rect key="frame" x="94" y="0.0" width="234" height="130"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YCr-tN-lcJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="220" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Day of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YCr-tN-lcJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="234" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4aD-uq-lzK">
-                                                <rect key="frame" x="0.0" y="48" width="220" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Month of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4aD-uq-lzK">
+                                                <rect key="frame" x="0.0" y="48" width="234" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="BFD-wl-fUW"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="e53-Ma-VS6"/>
@@ -96,8 +80,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="412-QY-hP8">
-                                                <rect key="frame" x="0.0" y="96" width="220" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="412-QY-hP8">
+                                                <rect key="frame" x="0.0" y="96" width="234" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
@@ -109,14 +93,14 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="k8x-Jv-H15"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Your Day " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isf-uW-YHy">
-                                <rect key="frame" x="96" y="140" width="223" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Birth Details and Press Find" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isf-uW-YHy">
+                                <rect key="frame" x="0.0" y="140" width="428" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Placeholder text)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nx7-LU-6E8">
-                                <rect key="frame" x="40" y="332" width="334" height="60"/>
+                                <rect key="frame" x="40" y="332" width="348" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="64a-8B-l51"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="aDb-hZ-VZA"/>
@@ -125,6 +109,57 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test (Test Button)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5E-Qh-R2t">
+                                <rect key="frame" x="40" y="412" width="348" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="AHt-2d-png"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="tertiarySystemFillColor"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qXD-gQ-0LK">
+                                <rect key="frame" x="57" y="786" width="316" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jz9-6k-37w">
+                                        <rect key="frame" x="0.0" y="0.0" width="154" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="aAU-cc-hsY"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="wH3-gQ-Z4Q"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Find">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemFillColor"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="label.borderRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dateCalculation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hKT-Es-ezG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1w-qX-L1X">
+                                        <rect key="frame" x="162" y="0.0" width="154" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="bBJ-AO-HBh"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="h8c-8d-d9D"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Test Button">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemFillColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="ButtonToRecieveDate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y2X-3o-vLv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BIM-Fi-5n8"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
@@ -132,20 +167,23 @@
                         <constraints>
                             <constraint firstItem="ZI5-Af-Rha" firstAttribute="top" secondItem="BIM-Fi-5n8" secondAttribute="top" id="0K5-xH-uFX"/>
                             <constraint firstItem="ZI5-Af-Rha" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="82z-gH-q3G"/>
-                            <constraint firstItem="isf-uW-YHy" firstAttribute="leading" secondItem="BIM-Fi-5n8" secondAttribute="leading" constant="96" id="D5j-Om-rkp"/>
-                            <constraint firstItem="ZI5-Af-Rha" firstAttribute="centerX" secondItem="Jz9-6k-37w" secondAttribute="centerX" id="H06-8k-ZHL"/>
+                            <constraint firstItem="r5E-Qh-R2t" firstAttribute="top" secondItem="nx7-LU-6E8" secondAttribute="bottom" constant="20" id="Aup-da-aKr"/>
+                            <constraint firstItem="r5E-Qh-R2t" firstAttribute="leading" secondItem="nx7-LU-6E8" secondAttribute="leading" id="BMf-oq-4ye"/>
+                            <constraint firstItem="isf-uW-YHy" firstAttribute="leading" secondItem="BIM-Fi-5n8" secondAttribute="leading" id="D5j-Om-rkp"/>
                             <constraint firstItem="nx7-LU-6E8" firstAttribute="leading" secondItem="BIM-Fi-5n8" secondAttribute="leading" constant="40" id="IcR-09-iQG"/>
                             <constraint firstItem="ZI5-Af-Rha" firstAttribute="bottom" secondItem="BIM-Fi-5n8" secondAttribute="bottom" constant="34" id="ImV-v1-kHn"/>
+                            <constraint firstItem="qXD-gQ-0LK" firstAttribute="leading" secondItem="BIM-Fi-5n8" secondAttribute="leading" constant="57" id="NtO-1y-eHF"/>
                             <constraint firstItem="isf-uW-YHy" firstAttribute="top" secondItem="BIM-Fi-5n8" secondAttribute="top" id="OJn-Ov-sOO"/>
-                            <constraint firstItem="BIM-Fi-5n8" firstAttribute="bottom" secondItem="Jz9-6k-37w" secondAttribute="bottom" constant="45" id="SGy-jx-TmX"/>
+                            <constraint firstItem="BIM-Fi-5n8" firstAttribute="trailing" secondItem="qXD-gQ-0LK" secondAttribute="trailing" constant="55" id="SsN-IV-f0x"/>
                             <constraint firstItem="ZI5-Af-Rha" firstAttribute="leading" secondItem="BIM-Fi-5n8" secondAttribute="leading" id="T4a-bl-x2D"/>
-                            <constraint firstItem="Jz9-6k-37w" firstAttribute="leading" secondItem="BIM-Fi-5n8" secondAttribute="leading" constant="114" id="g8S-ZN-FbQ"/>
+                            <constraint firstItem="r5E-Qh-R2t" firstAttribute="trailing" secondItem="nx7-LU-6E8" secondAttribute="trailing" id="Tfr-gO-rB0"/>
+                            <constraint firstItem="BIM-Fi-5n8" firstAttribute="bottom" secondItem="qXD-gQ-0LK" secondAttribute="bottom" constant="71" id="dsl-G3-uyc"/>
                             <constraint firstItem="BIM-Fi-5n8" firstAttribute="trailing" secondItem="g9b-uo-oTs" secondAttribute="trailing" constant="50" id="hzP-ab-ybh"/>
                             <constraint firstItem="g9b-uo-oTs" firstAttribute="leading" secondItem="BIM-Fi-5n8" secondAttribute="leading" constant="50" id="jzN-iH-tYE"/>
                             <constraint firstItem="nx7-LU-6E8" firstAttribute="top" secondItem="g9b-uo-oTs" secondAttribute="bottom" constant="23" id="k9g-rz-T7V"/>
                             <constraint firstItem="g9b-uo-oTs" firstAttribute="top" secondItem="isf-uW-YHy" secondAttribute="bottom" constant="15" id="oxB-AB-XNc"/>
                             <constraint firstItem="BIM-Fi-5n8" firstAttribute="trailing" secondItem="nx7-LU-6E8" secondAttribute="trailing" constant="40" id="usB-k5-x1c"/>
-                            <constraint firstItem="BIM-Fi-5n8" firstAttribute="trailing" secondItem="isf-uW-YHy" secondAttribute="trailing" constant="95" id="xJb-Md-3ev"/>
+                            <constraint firstItem="BIM-Fi-5n8" firstAttribute="trailing" secondItem="isf-uW-YHy" secondAttribute="trailing" id="xJb-Md-3ev"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Day Finder" id="vVg-ZQ-icB">
@@ -156,10 +194,17 @@
                             <color key="tintColor" systemColor="labelColor"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dayCalcResult" destination="nx7-LU-6E8" id="2ef-2G-gji"/>
+                        <outlet property="dayInput" destination="YCr-tN-lcJ" id="5Ni-Ws-U6n"/>
+                        <outlet property="monthInput" destination="4aD-uq-lzK" id="3Tl-Ls-JyU"/>
+                        <outlet property="resultCalc" destination="r5E-Qh-R2t" id="wcN-VH-XI8"/>
+                        <outlet property="yearInput" destination="412-QY-hP8" id="tPZ-YL-riE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1237.5" y="25"/>
+            <point key="canvasLocation" x="1237.5" y="24.295774647887324"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KUs-uB-OjP">
@@ -167,7 +212,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dpx-XJ-Uao" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="AOx-b7-qDN">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -192,6 +237,9 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemFillColor">
+            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
