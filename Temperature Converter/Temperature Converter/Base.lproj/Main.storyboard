@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c32-uB-M76">
-    <device id="retina5_9" orientation="portrait" appearance="dark"/>
+    <device id="retina4_0" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +13,7 @@
             <objects>
                 <navigationController id="c32-uB-M76" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="kq9-nK-C7s">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -34,14 +34,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Temperature_Converter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="_zGcHxKg" translatesAutoresizingMaskIntoConstraints="NO" id="L22-gO-Mfy" userLabel="Background pic">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="602"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(numCelc) ºC is (numKelvin) ºK or (numFahren) ºF" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dG1-by-3D3">
-                                <rect key="frame" x="76" y="140" width="224" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dG1-by-3D3">
+                                <rect key="frame" x="76" y="91" width="169" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="169" id="Ueb-VY-Gpa"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="wfD-n8-gKL"/>
@@ -53,10 +53,10 @@
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oQh-wX-W1G">
-                                <rect key="frame" x="35" y="532" width="309" height="201"/>
+                                <rect key="frame" x="35" y="322" width="254" height="201"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(num)ºC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACF-vX-HJW">
-                                        <rect key="frame" x="0.0" y="0.0" width="309" height="100"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30ºC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACF-vX-HJW">
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="AKj-UH-TyD"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="OEz-RP-jHn"/>
@@ -67,17 +67,20 @@
                                         <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="700" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DJD-fm-iRT">
-                                        <rect key="frame" x="-2" y="120" width="313" height="31"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="700" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="-30" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="DJD-fm-iRT">
+                                        <rect key="frame" x="-2" y="120" width="258" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Sic-kJ-SYp"/>
                                             <constraint firstAttribute="height" constant="30" id="sd0-iq-MDf"/>
                                         </constraints>
                                         <color key="minimumTrackTintColor" red="0.82231872110000004" green="0.39650760149999997" blue="0.1214235618" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="thumbTintColor" systemColor="systemRedColor"/>
+                                        <connections>
+                                            <action selector="sliderToLbl:" destination="BYZ-38-t0r" eventType="valueChanged" id="Igh-7x-9hq"/>
+                                        </connections>
                                     </slider>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2ew-It-jRd" userLabel="Celcius, Fahrenheit">
-                                        <rect key="frame" x="0.0" y="170" width="309" height="32"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2ew-It-jRd" userLabel="Celcius, Fahrenheit">
+                                        <rect key="frame" x="0.0" y="170" width="254" height="32"/>
                                         <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="169" id="ePH-co-A9A"/>
@@ -88,6 +91,9 @@
                                             <segment title="Fahrenheit"/>
                                         </segments>
                                         <color key="selectedSegmentTintColor" systemColor="systemRedColor"/>
+                                        <connections>
+                                            <action selector="segmentControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="kT3-X2-TaC"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                             </stackView>
@@ -108,6 +114,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TempConverter" id="ohY-q8-eVz"/>
+                    <connections>
+                        <outlet property="celcNumLbl" destination="ACF-vX-HJW" id="VQq-yU-Ar2"/>
+                        <outlet property="celcNumSlider" destination="DJD-fm-iRT" id="RP3-t2-HJa"/>
+                        <outlet property="tempConvLbl" destination="dG1-by-3D3" id="TgR-Zc-7B9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
