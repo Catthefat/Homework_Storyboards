@@ -3,6 +3,7 @@
     <device id="retina4_0" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -37,29 +38,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="_zGcHxKg" translatesAutoresizingMaskIntoConstraints="NO" id="L22-gO-Mfy" userLabel="Background pic">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="602"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="_zGcHxKg" translatesAutoresizingMaskIntoConstraints="NO" id="L22-gO-Mfy" userLabel="Background pic">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dG1-by-3D3">
-                                <rect key="frame" x="76" y="91" width="169" height="100"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2ew-It-jRd" userLabel="Celcius, Fahrenheit">
+                                <rect key="frame" x="30" y="483" width="260" height="36"/>
+                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="169" id="Ueb-VY-Gpa"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="wfD-n8-gKL"/>
+                                    <constraint firstAttribute="height" constant="35" id="uuL-Ka-2BQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="20"/>
-                                <color key="textColor" systemColor="systemPinkColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" systemColor="separatorColor"/>
-                                <size key="shadowOffset" width="2" height="2"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oQh-wX-W1G">
-                                <rect key="frame" x="35" y="322" width="254" height="201"/>
+                                <segments>
+                                    <segment title="Kelvin"/>
+                                    <segment title="Fahrenheit"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemRedColor"/>
+                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="R7u-pn-hkm">
+                                <rect key="frame" x="30" y="237" width="260" height="166"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30ºC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACF-vX-HJW">
-                                        <rect key="frame" x="0.0" y="0.0" width="254" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="AKj-UH-TyD"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="OEz-RP-jHn"/>
+                                            <constraint firstAttribute="width" constant="260" id="IHS-Tq-eIc"/>
+                                            <constraint firstAttribute="height" constant="60" id="t9g-QZ-IMd"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,80 +68,108 @@
                                         <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="700" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="-30" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="DJD-fm-iRT">
-                                        <rect key="frame" x="-2" y="120" width="258" height="31"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="-100" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="6Uq-Rr-aSS">
+                                        <rect key="frame" x="-2" y="68" width="264" height="31"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Sic-kJ-SYp"/>
-                                            <constraint firstAttribute="height" constant="30" id="sd0-iq-MDf"/>
+                                            <constraint firstAttribute="height" constant="30" id="0Eq-u1-3wS"/>
+                                            <constraint firstAttribute="width" constant="260" id="gcA-nd-XdV"/>
                                         </constraints>
-                                        <color key="minimumTrackTintColor" red="0.82231872110000004" green="0.39650760149999997" blue="0.1214235618" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <imageReference key="minimumValueImage" image="minus" catalog="system" symbolScale="medium" renderingMode="hierarchical-single">
+                                            <hierarchicalColors>
+                                                <color systemColor="systemRedColor"/>
+                                                <color systemColor="secondaryLabelColor"/>
+                                                <color systemColor="tertiaryLabelColor"/>
+                                            </hierarchicalColors>
+                                        </imageReference>
+                                        <imageReference key="maximumValueImage" image="plus" catalog="system" symbolScale="medium" renderingMode="hierarchical-single">
+                                            <hierarchicalColors>
+                                                <color systemColor="systemRedColor"/>
+                                                <color systemColor="secondaryLabelColor"/>
+                                                <color systemColor="tertiaryLabelColor"/>
+                                            </hierarchicalColors>
+                                        </imageReference>
+                                        <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
+                                        <color key="maximumTrackTintColor" systemColor="systemOrangeColor"/>
                                         <color key="thumbTintColor" systemColor="systemRedColor"/>
                                         <connections>
-                                            <action selector="sliderToLbl:" destination="BYZ-38-t0r" eventType="valueChanged" id="Igh-7x-9hq"/>
+                                            <action selector="SliderTempChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="rIO-us-xYd"/>
                                         </connections>
                                     </slider>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2ew-It-jRd" userLabel="Celcius, Fahrenheit">
-                                        <rect key="frame" x="0.0" y="170" width="254" height="32"/>
-                                        <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dG1-by-3D3">
+                                        <rect key="frame" x="0.0" y="106" width="260" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="169" id="ePH-co-A9A"/>
-                                            <constraint firstAttribute="height" constant="31" id="nKn-6e-CZk"/>
+                                            <constraint firstAttribute="height" constant="60" id="FFw-TJ-5Ev"/>
+                                            <constraint firstAttribute="width" constant="260" id="d5O-ly-unb"/>
                                         </constraints>
-                                        <segments>
-                                            <segment title="Kelvin"/>
-                                            <segment title="Fahrenheit"/>
-                                        </segments>
-                                        <color key="selectedSegmentTintColor" systemColor="systemRedColor"/>
-                                        <connections>
-                                            <action selector="segmentControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="kT3-X2-TaC"/>
-                                        </connections>
-                                    </segmentedControl>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="26"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" systemColor="systemRedColor"/>
+                                        <size key="shadowOffset" width="2" height="2"/>
+                                    </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="6Uq-Rr-aSS" firstAttribute="top" secondItem="ACF-vX-HJW" secondAttribute="bottom" constant="8" symbolic="YES" id="JD8-DN-npj"/>
+                                </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From ºC to ºK or ºF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Go-XG-ZpW">
+                                <rect key="frame" x="0.0" y="129" width="320" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dG1-by-3D3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="5F1-20-Ler"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oQh-wX-W1G" secondAttribute="trailing" constant="31" id="JFb-ML-fEf"/>
-                            <constraint firstItem="L22-gO-Mfy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KNV-3A-XZd"/>
-                            <constraint firstItem="dG1-by-3D3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qds-iA-ehc"/>
-                            <constraint firstItem="oQh-wX-W1G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="XMu-K4-jWh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oQh-wX-W1G" secondAttribute="bottom" constant="45" id="Xpm-k0-YOh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dG1-by-3D3" secondAttribute="trailing" constant="75" id="dfr-4c-hR8"/>
-                            <constraint firstItem="L22-gO-Mfy" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="exV-B3-uds"/>
-                            <constraint firstItem="L22-gO-Mfy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sKG-Kx-K2r"/>
-                            <constraint firstItem="L22-gO-Mfy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vDt-U8-MbN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2ew-It-jRd" secondAttribute="bottom" constant="50" id="1Dj-wh-QQx"/>
+                            <constraint firstAttribute="bottom" secondItem="L22-gO-Mfy" secondAttribute="bottom" id="E2x-g8-F5H"/>
+                            <constraint firstItem="2ew-It-jRd" firstAttribute="top" secondItem="R7u-pn-hkm" secondAttribute="bottom" constant="80" id="JAd-NN-hkf"/>
+                            <constraint firstItem="L22-gO-Mfy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JRe-3e-zsA"/>
+                            <constraint firstItem="R7u-pn-hkm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Myo-vs-Tgd"/>
+                            <constraint firstItem="2ew-It-jRd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="O77-k5-iNp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R7u-pn-hkm" secondAttribute="trailing" constant="30" id="W2e-5H-7bs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2ew-It-jRd" secondAttribute="trailing" constant="30" id="jTP-pK-Tad"/>
+                            <constraint firstItem="8Go-XG-ZpW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pLr-nb-rWD"/>
+                            <constraint firstItem="8Go-XG-ZpW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="pjm-Ov-QBQ"/>
+                            <constraint firstItem="L22-gO-Mfy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qus-H6-0Ng"/>
+                            <constraint firstItem="L22-gO-Mfy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vUR-ep-6ws"/>
+                            <constraint firstItem="8Go-XG-ZpW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vWR-rN-4bm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TempConverter" id="ohY-q8-eVz"/>
                     <connections>
+                        <outlet property="KelvinFahrnSegmentControler" destination="2ew-It-jRd" id="KV0-Aw-mgm"/>
                         <outlet property="celcNumLbl" destination="ACF-vX-HJW" id="VQq-yU-Ar2"/>
-                        <outlet property="celcNumSlider" destination="DJD-fm-iRT" id="RP3-t2-HJa"/>
+                        <outlet property="celcNumSlider2" destination="6Uq-Rr-aSS" id="Rw8-Ly-Wyg"/>
                         <outlet property="tempConvLbl" destination="dG1-by-3D3" id="TgR-Zc-7B9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="90.845070422535215"/>
+            <point key="canvasLocation" x="29.439252336448597" y="90.712742980561558"/>
         </scene>
     </scenes>
     <resources>
         <image name="_zGcHxKg" width="1080" height="1920"/>
+        <image name="minus" catalog="system" width="128" height="24"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

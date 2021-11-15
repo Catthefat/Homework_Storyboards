@@ -10,27 +10,29 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tempConvLbl: UILabel!
-    @IBOutlet weak var celcNumSlider: UISlider!
     @IBOutlet weak var celcNumLbl: UILabel!
+    @IBOutlet weak var KelvinFahrnSegmentControler: UISegmentedControl!
+    @IBOutlet weak var celcNumSlider2: UISlider!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
     }
+    
+    @IBAction func SliderTempChange(_ sender: Any) {
+        celcNumLbl.text = String(Int(round(celcNumSlider2.value))) + "ºC"
+        let celcTemp: Int = Int(celcNumSlider2.value)
+        let kelvinTemp: Float = Float(celcTemp) + 273.15
+        let FahrenTemp: Int = Int(Double(celcTemp * 9 / 5 + 32))
+        
+        if KelvinFahrnSegmentControler.selectedSegmentIndex == 0 {
+            tempConvLbl.text = String(kelvinTemp) + "ºK"
+        }else if KelvinFahrnSegmentControler.selectedSegmentIndex == 1 {
+            tempConvLbl.text = String(FahrenTemp) + "ºF"
 
-    @IBAction func sliderToLbl(_ sender: Any) {
-        celcNumLbl.text = String(Int(round(celcNumSlider.value))) + "ºC"
+        }
+        
     }
     
-    @IBAction func segmentControl(_ sender: UISegmentedControl) {
-        let celcTemp: Int = Int(celcNumSlider.value)
-        let kelvinTemp: Double = 273.15
-//        let FahrenTemp: Int = (celcTemp * (9 / 5)) + 32
-        if sender.selectedSegmentIndex == 0{
-            tempConvLbl.text = String(Float(kelvinTemp + Double(celcTemp))) + "ºK"
-        }else if sender.selectedSegmentIndex == 1{
-            tempConvLbl.text = String(Double(celcTemp * 9) / 5 + 32) + "ºF"
-        }
-    }
 }
 

@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var monthInput: UITextField!
     @IBOutlet weak var yearInput: UITextField!
     @IBOutlet weak var resultCalc: UILabel!
-    
+    @IBOutlet weak var findButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,18 +47,71 @@ class ViewController: UIViewController {
         
     @IBAction func dateCalculation(_ sender: Any) {
         
-        func formatterFunc() {
-            let currentDate = Date()
-            let formatter = DateFormatter()
-            formatter.timeZone = .current
-            formatter.locale = .current
-            formatter.dateFormat = "dd/MM/yyyy"
-            dayCalcResult.text = formatter.string(from: currentDate)
-        }
         
-        let dateOfBirth = "\(String(describing: dayInput.text!))/\(String(describing: monthInput.text!))/\(String(describing: yearInput.text!))"
-        dayCalcResult.text = "\(dateOfBirth)"
-        print(dateOfBirth)
+        let calendar = Calendar.current
+        var dateComponents = DateComponents()
+
+        guard let day = Int(dayInput.text!),
+              let month = Int(monthInput.text!),
+              let year = Int(yearInput.text!) else {
+
+            warningAlert(withTitle: "Input Error!", withMessage: "Date text fields can't be empty.")
+                  return
+              }
+        
+        dateComponents.day = day
+        dateComponents.month = month
+        dateComponents.year = year
+        
+        guard let date = calendar.date(from: dateComponents) else {return} // else {return} - wont crash the app. will catch that error
+        let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "en_EN")
+            dateFormatter.dateFormat = "EEEE"
+        
+                switch findButton.titleLabel?.text {
+                case "Find":
+                    findButton.setTitle("Clear", for: .normal)
+                    if day >= 1 && day <= 31 && month >= 1 && month <= 12 {
+                        let weekday = dateFormatter.string(from: date)
+                        dayCalcResult.text = weekday
+                    }else {
+                        warningAlert(withTitle: "Error!", withMessage: "Wrong Date!")
+                    }
+                default: findButton.setTitle("Find", for: .normal)
+                    clearTextFields()
+                }
+        
+                
+                
+//        func formatterFunc() {
+//            let currentDate = Date()
+//            let formatter = DateFormatter()
+//            formatter.timeZone = .current
+//            formatter.locale = .current
+//            formatter.dateFormat = "dd/MM/yyyy"
+//            dayCalcResult.text = formatter.string(from: currentDate)
+//        }
+//
+//        let dateOfBirth = "\(String(describing: dayInput.text!))/\(String(describing: monthInput.text!))/\(String(describing: yearInput.text!))"
+//        dayCalcResult.text = "\(dateOfBirth)"
+//        print(dateOfBirth)
+//
+    }
+    func clearTextFields() {
+        dayInput.text = ""
+        monthInput.text = ""
+        yearInput.text = ""
+
+    }
+    
+    
+    func warningAlert(withTitle title: String?, withMessage message: String?) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction (title: "OK", style: .destructive, handler: nil)
+    
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
         
     }
     
