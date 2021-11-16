@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var celcNumSlider2: UISlider!
     override func viewDidLoad() {
         super.viewDidLoad()
+        tempConvLbl.text = "303.15K"
         // Do any additional setup after loading the view.
         
     }
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
         let FahrenTemp: Int = Int(Double(celcTemp * 9 / 5 + 32))
         
         if KelvinFahrnSegmentControler.selectedSegmentIndex == 0 {
-            tempConvLbl.text = String(kelvinTemp) + "ºK"
+            tempConvLbl.text = String(kelvinTemp) + "K"
         }else if KelvinFahrnSegmentControler.selectedSegmentIndex == 1 {
             tempConvLbl.text = String(FahrenTemp) + "ºF"
 
